@@ -1,0 +1,24 @@
+{
+  "name": "novacart-capstone",
+  "version": "1.0.0",
+  "description": "A production-ready e-commerce product catalog SPA capstone project.",
+  "type": "module",
+  "scripts": {
+    "start": "npx serve .",
+    "preview": "npx serve ."
+  },
+  "keywords": [
+    "javascript",
+    "spa",
+    "ecommerce",
+    "capstone",
+    "client-side-routing",
+    "localstorage",
+    "responsive"
+  ],
+  "author": "Ishan Zambare",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

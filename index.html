@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NovaCart | Web Development Capstone Project</title>
+  <meta name="description" content="A production-ready e-commerce product catalog SPA with modular frontend architecture, client-side routing, optimized assets, cart state, and deployment configuration.">
+  <meta name="author" content="Ishan Zambare">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="canonical" href="https://example.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NovaCart | Web Development Capstone Project">
+  <meta property="og:description" content="A modular e-commerce product catalog with routing, product filtering, cart state, and optimized static deployment.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:site_name" content="NovaCart">
+
+  <link rel="preload" href="assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#/" data-link aria-label="NovaCart home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>NovaCart</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="#/" data-link>Home</a>
+        <a href="#/products" data-link>Products</a>
+        <a href="#/cart" data-link>
+          Cart <span class="cart-badge" data-cart-count>0</span>
+        </a>
+        <a href="#/about" data-link>About</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false">🌙</button>
+    </div>
+  </header>
+
+  <main id="app" class="app-view" tabindex="-1" aria-live="polite"></main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span data-current-year></span> NovaCart. Built as a Web Development Capstone Project.</p>
+      <p class="muted">Modular SPA • Client-side routing • localStorage cart • Optimized static deployment</p>
+    </div>
+  </footer>
+
+  <template id="product-card-template">
+    <article class="product-card card-hover">
+      <a class="product-image-link" data-product-link>
+        <img class="product-image" width="640" height="420" loading="lazy" decoding="async" alt="">
+      </a>
+      <div class="product-body">
+        <div class="product-meta">
+          <span class="category-pill" data-category></span>
+          <span class="rating" data-rating></span>
+        </div>
+        <h3><a data-product-title-link></a></h3>
+        <p class="muted" data-description></p>
+        <div class="product-footer">
+          <strong class="price" data-price></strong>
+          <button class="button small" type="button" data-add-to-cart>Add to cart</button>
+        </div>
+      </div>
+    </article>
+  </template>
+</body>
+</html>

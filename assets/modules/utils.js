@@ -1,0 +1,36 @@
+export function formatCurrency(value) {
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0
+  }).format(value);
+}
+
+export function qs(selector, parent = document) {
+  return parent.querySelector(selector);
+}
+
+export function qsa(selector, parent = document) {
+  return [...parent.querySelectorAll(selector)];
+}
+
+export function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (char) => {
+    const lookup = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    };
+    return lookup[char];
+  });
+}
+
+export function normalize(value) {
+  return String(value).trim().toLowerCase();
+}
+
+export function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
